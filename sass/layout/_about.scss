@@ -1,0 +1,149 @@
+.about {
+  &.hidden {
+    opacity: 0;
+    transition: all 600ms;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include tablet {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      display: block;
+      content: '';
+      width: 100%;
+      height: 94%;
+
+      background-color: var(--1);
+    }
+  }
+}
+
+// -------- content ----------
+
+.about-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: all 1s;
+    transition-delay: 800ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-title {
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 400px;
+  margin-bottom: 20px;
+
+  color: var(--black);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 156.25%;
+}
+
+.about-button {
+  @media screen and (max-width: 767.98px) {
+    margin-left: auto;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+// --------- gallery ------------
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  @include tablet {
+    width: 304px;
+    margin-top: 30px;
+    margin-left: 15px;
+
+    gap: 15px;
+  }
+
+  @include desktop {
+    width: 570px;
+    margin-left: 100px;
+
+    gap: 30px;
+  }
+}
+
+.about-gallery-left-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include desktop {
+    gap: 30px;
+  }
+}
+
+.about-gallery-right-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 30px;
+
+  @include desktop {
+    gap: 30px;
+  }
+}
+
+.about-item {
+  background-color: var(--bg-image-color);
+  &.hidden {
+    opacity: 0;
+    transform: translate(-20%, 20%);
+    transition: all 800ms;
+    &.first {
+      transition-delay: 400ms;
+    }
+    &.second {
+      transition-delay: 600ms;
+    }
+    &.third {
+      transition-delay: 800ms;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

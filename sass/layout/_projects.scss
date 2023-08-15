@@ -1,0 +1,183 @@
+.projects {
+  .container {
+    width: 1200px;
+  }
+}
+
+.projects-title {
+  margin-bottom: 30px;
+  &.hidden {
+    opacity: 0;
+    transform: translateX(20%);
+    transition: all 1s;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.projects-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.projects-gallery-upper-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  overflow: hidden;
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+}
+
+.projects-gallery-lower-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  overflow: hidden;
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+}
+
+.projects-item {
+  position: relative;
+  width: 100%;
+  &:hover {
+    .shadow-wrap {
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    width: inherit;
+  }
+
+  picture {
+    width: 100%;
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(-40%);
+    transition: all 1s;
+    transition-delay: 400ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shadow-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+
+  background-color: #333333ce;
+  opacity: 0;
+  transition: opacity var(--main-transition-effect);
+}
+
+.shadow-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: min-content;
+  height: 100%;
+}
+
+.project-item-title {
+  margin-bottom: 14px;
+
+  color: var(--white);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+
+  text-transform: uppercase;
+  pointer-events: none;
+  @include desktop {
+    font-size: 64px;
+  }
+}
+
+.project-item-link {
+  position: relative;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  gap: 12px;
+
+  width: 134px;
+
+  color: var(--white);
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    &::after {
+      right: -12px;
+    }
+  }
+
+  &::after {
+    position: relative;
+    right: 0;
+
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('../../images/arrow-right-light.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: all var(--main-transition-effect);
+  }
+}
+
+.projects-button {
+  margin-left: auto;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 1s;
+    transition-delay: 400ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

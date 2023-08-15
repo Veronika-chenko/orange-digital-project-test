@@ -1,0 +1,187 @@
+.footer {
+  color: var(--white);
+  background-color: #2c2c2c;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include desktop {
+      gap: 0;
+    }
+  }
+}
+
+.footer-upper-box {
+  display: flex;
+  padding: 58px 0 60px;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: all 800ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-logo {
+  width: 100px;
+  height: 44px;
+  height: fit-content;
+  color: var(--white);
+
+  @include desktop {
+    width: 145px;
+    height: 94px;
+    margin-right: 99px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  order: 2;
+  width: 100%;
+  gap: 30px;
+
+  @include desktop {
+    width: 605px;
+    order: 0;
+    margin-right: 70px;
+  }
+}
+
+.footer-top-text {
+  margin-bottom: 25px;
+
+  color: var(--white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+// -------- navigation ----------
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-nav-link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 171%;
+  letter-spacing: 0.42px;
+
+  transition: color var(--main-transition-effect);
+
+  &:hover,
+  &:focus {
+    color: var(--white-text-hover);
+  }
+}
+
+// -------- contacts ----------
+
+.footer-contacts-wrap {
+  display: flex;
+  flex-direction: column;
+
+  address {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-contacts-item {
+  &:nth-child(1) {
+    img {
+      width: 11px;
+      height: 16px;
+    }
+  }
+  &:nth-child(2) {
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &:nth-child(3) {
+    img {
+      width: 16px;
+      height: 11px;
+    }
+  }
+}
+
+.footer-contacts-link {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 171%;
+  letter-spacing: 0.42px;
+
+  transition: color var(--main-transition-effect);
+
+  &:hover,
+  &:focus {
+    color: var(--white-text-hover);
+  }
+}
+
+.footer-contacts-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  use {
+    stroke: var(--white);
+  }
+}
+
+// -------- socials ----------
+
+.footer-social-list {
+  display: flex;
+  gap: 30px;
+  @include desktop {
+    gap: 40px;
+  }
+}
+
+.footer-socials-link {
+  transition: fill var(--main-transition-effect);
+
+  &:hover,
+  &:focus {
+    fill: var(--white-text-hover);
+  }
+}
+
+.copyright {
+  padding: 24px 0;
+  text-align: center;
+  color: rgba(200, 200, 200, 0.5);
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-style: normal;
+  line-height: 183%;
+  border-top: 0.5px solid rgb(216, 216, 216, 0.3);
+}

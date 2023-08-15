@@ -1,0 +1,173 @@
+.connection-content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.connection-title {
+  margin-bottom: 22px;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 1s;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.connection-form {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 391px;
+    flex-shrink: 0;
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: translate(-20%, 20%);
+    transition: all 800ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.form-field-wrap {
+  position: relative;
+  margin-bottom: 10px;
+
+  & label {
+    position: absolute;
+    top: 14px;
+    left: 21px;
+
+    color: #8d8d8d;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+
+    pointer-events: none;
+  }
+
+  &.textarea-wrap {
+    margin-bottom: 22px;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 46px;
+  padding: 14px 21px;
+
+  color: #8d8d8d;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+
+  background-color: #f3f3f3;
+  border: none;
+
+  &:not(:placeholder-shown) + .form-label,
+  &:not(:focus):not(:placeholder-shown) + .form-label {
+    opacity: 0;
+  }
+}
+
+.required-field {
+  color: #c30000;
+}
+
+.textarea-input {
+  display: block;
+  height: 147px;
+  resize: none;
+}
+
+// checkbox
+
+.check-text-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  margin-bottom: 21px;
+
+  color: var(--grey-1);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.42px;
+
+  cursor: pointer;
+
+  &::before {
+    position: relative;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    border: 1px solid #8d8d8d;
+    scale: 1;
+    transition: transform var(--main-transition-effect);
+
+    .input-check:focus + & {
+      transform: scale(1.2);
+    }
+
+    .input-check:checked + & {
+      background-image: url('../../images/icon-checked.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.connection-picture-wrap {
+  display: none;
+  @include tablet {
+    display: block;
+    width: 100%;
+    height: 371px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: translate(20%, 20%);
+    transition: all 800ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

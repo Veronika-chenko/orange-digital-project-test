@@ -1,0 +1,43 @@
+body {
+  font-family: 'TT Hoves', sans-serif;
+  color: var(--grey-1);
+  background-color: var(--white);
+}
+
+section {
+  padding-bottom: 120px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 100%;
+  overflow: hidden;
+  
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet{
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
