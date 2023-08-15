@@ -36,7 +36,7 @@
     background-color: #bdbdbd5c;
   }
   &::after {
-    background-image: url('../../images/arrow-right-dark.svg');
+    background-image: url('../images/arrow-right-dark.svg');
   }
 }
 
@@ -50,6 +50,6 @@
   }
 
   &::after {
-    background-image: url('../../images/arrow-right-light.svg');
+    background-image: url('../images/arrow-right-light.svg');
   }
 }
