@@ -420,8 +420,14 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-container {
+    max-width: 1200px;
   }
 }
 
