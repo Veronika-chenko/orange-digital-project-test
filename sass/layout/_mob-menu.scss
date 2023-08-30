@@ -81,6 +81,9 @@
   &:nth-child(4) {
     transition-delay: 500ms;
   }
+  &:nth-child(5) {
+    transition-delay: 600ms;
+  }
 
   &.show {
     opacity: 1;

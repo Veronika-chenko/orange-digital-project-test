@@ -16,13 +16,8 @@
 .hero-container {
   position: relative;
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
-  }
   overflow: hidden;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -99,6 +94,40 @@
   overflow: hidden;
   @include desktop {
     width: 770px;
+  }
+}
+
+.hero-swiper-container {
+  height: 480px;
+  @include desktop {
+    height: 829px;
+  }
+}
+
+.hero .swiper-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--grey-4);
+
+  &.first-slide {
+    background-image: url('../images/hero/hero-min.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero/hero@2-min.jpg');
+    }
+  }
+
+  &.second-slide {
+    background-image: url('../images/hero/hero-min.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero/hero@2-min.jpg');
+    }
   }
 }
 
@@ -184,7 +213,7 @@
   background-color: var(--grey-5);
 }
 
-.hero-button {
+.hero .hero-button {
   position: absolute;
   bottom: 0;
   right: 0;
