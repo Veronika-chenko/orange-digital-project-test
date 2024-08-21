@@ -3,8 +3,8 @@
 
   &.hidden {
     opacity: 0;
-    transform: translateY(-50%);
-    transition: all 1s;
+    transform: translateY(50%);
+    transition: all 800ms;
   }
 
   &.show {
@@ -54,18 +54,6 @@
   @include desktop {
     padding-top: 336px;
   }
-
-  &.hidden {
-    opacity: 0;
-    transform: translateX(-50%);
-    transition: all 1s;
-    transition-delay: 800ms;
-  }
-
-  &.show {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .hero-title {
@@ -78,6 +66,18 @@
   line-height: 100%;
 
   margin-bottom: 60px;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 800ms;
+    transition-delay: 400ms;
+  }
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   @include tablet {
     margin-bottom: 80px;
@@ -95,7 +95,10 @@
 .hero-images-wrap {
   position: relative;
   min-width: 0;
-  width: inherit;
+  @include tablet {
+    width: 436px;
+  }
+
   overflow: hidden;
   @include desktop {
     width: 770px;
@@ -160,6 +163,16 @@
   &:hover {
     background-color: var(--grey-7);
   }
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 800ms;
+    transition-delay: 600ms;
+  }
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .swiper-prev-btn-icon {
@@ -173,6 +186,17 @@
 
   width: 90px;
   position: relative;
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 800;
+    transition-delay: 800ms;
+  }
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+  }
 
   @include tablet {
     width: 142px;
@@ -209,13 +233,6 @@
       background-color: var(--grey-5);
     }
   }
-}
-
-.swiper-pagination-fraction-delimiter {
-  display: block;
-
-  width: 44px;
-  background-color: var(--grey-5);
 }
 
 .hero .hero-button {

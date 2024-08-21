@@ -119,24 +119,24 @@
     <main>
       <section class="hero hidden">
         <div class="hero-container">
-          <div class="hero-content hidden">
-            <h1 class="hero-title">
+          <div class="hero-content">
+            <h1 class="hero-title hidden">
               PROJECT <br />
               <span class="hero-title-accent">HOME</span>
             </h1>
             <div class="swiper-btn-group">
-              <button class="swiper-btn swiper-btn-prev">
+              <button class="swiper-btn swiper-btn-prev hidden">
                 <svg width="24px" height="24px" class="swiper-prev-btn-icon">
                   <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
                 </svg>
               </button>
-              <button class="swiper-btn swiper-btn-next">
+              <button class="swiper-btn swiper-btn-next hidden">
                 <svg width="24px" height="24px">
                   <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
                 </svg>
               </button>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination hidden"></div>
           </div>
           <div class="hero-images-wrap">
             <div class="hero-swiper-container swiper-container">
@@ -151,9 +151,9 @@
       </section>
       <section class="about hidden">
         <div class="container">
-          <div class="about-content hidden">
-            <h2 class="about-title section-title">О компании</h2>
-            <p class="about-text">
+          <div class="about-content">
+            <h2 class="about-title section-title hidden">О компании</h2>
+            <p class="about-text hidden">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -161,7 +161,7 @@
               survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged.
             </p>
-            <a href="" class="main-button light about-button">ЧИТАТЬ</a>
+            <a href="" class="main-button light about-button hidden">ЧИТАТЬ</a>
           </div>
           <div class="about-gallery">
             <ul class="about-gallery-left-list">
@@ -266,157 +266,153 @@
       <section class="projects">
         <div class="container">
           <h2 class="projects-title section-title hidden">Наши проекты</h2>
-          <div class="projects-gallery">
-            <ul class="projects-gallery-upper-list">
-              <li class="projects-item hidden">
-                <div class="shadow-wrap">
-                  <div class="shadow-content">
-                    <h4 class="project-item-title">ДОСУГОВЫЙ ЦЕНТР</h4>
-                    <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
-                  </div>
+          <ul class="projects-gallery">
+            <li class="projects-item hidden">
+              <div class="shadow-wrap">
+                <div class="shadow-content">
+                  <h4 class="project-item-title">ДОСУГОВЫЙ ЦЕНТР</h4>
+                  <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
                 </div>
-                <picture>
-                  <source
-                    srcset="
-                      ./images/projects/project-1-min.webp   1x,
-                      ./images/projects/project-1@2-min.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/projects/project-1-min.jpg   1x,
-                      ./images/projects/project-1@2-min.jpg 2x
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./images/projects/project-1-min.jpg"
-                    alt="project-1"
-                    loading="lazy"
-                  />
-                </picture>
-              </li>
-              <li class="projects-item hidden">
-                <div class="shadow-wrap">
-                  <div class="shadow-content">
-                    <h4 class="project-item-title">Loremos ipsum</h4>
-                    <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
-                  </div>
+              </div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/projects/project-1-min.webp   1x,
+                    ./images/projects/project-1@2-min.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/projects/project-1-min.jpg   1x,
+                    ./images/projects/project-1@2-min.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/projects/project-1-min.jpg"
+                  alt="project-1"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+            <li class="projects-item hidden">
+              <div class="shadow-wrap">
+                <div class="shadow-content">
+                  <h4 class="project-item-title">Loremos ipsum</h4>
+                  <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
                 </div>
-                <picture>
-                  <source
-                    srcset="
-                      ./images/projects/project-2-min.webp   1x,
-                      ./images/projects/project-2@2-min.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/projects/project-2-min.jpg   1x,
-                      ./images/projects/project-2@2-min.jpg 2x
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./images/projects/project-2-min.jpg"
-                    alt="project-2"
-                    loading="lazy"
-                  />
-                </picture>
-              </li>
-            </ul>
-            <ul class="projects-gallery-lower-list">
-              <li class="projects-item hidden">
-                <div class="shadow-wrap">
-                  <div class="shadow-content">
-                    <h4 class="project-item-title">Lorem</h4>
-                    <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
-                  </div>
+              </div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/projects/project-2-min.webp   1x,
+                    ./images/projects/project-2@2-min.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/projects/project-2-min.jpg   1x,
+                    ./images/projects/project-2@2-min.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/projects/project-2-min.jpg"
+                  alt="project-2"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+            <li class="projects-item hidden">
+              <div class="shadow-wrap">
+                <div class="shadow-content">
+                  <h4 class="project-item-title">Lorem</h4>
+                  <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
                 </div>
-                <picture>
-                  <source
-                    srcset="
-                      ./images/projects/project-3-min.webp   1x,
-                      ./images/projects/project-3@2-min.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/projects/project-3-min.jpg   1x,
-                      ./images/projects/project-3@2-min.jpg 2x
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./images/projects/project-3-min.jpg"
-                    alt="project-3"
-                    loading="lazy"
-                  />
-                </picture>
-              </li>
-              <li class="projects-item hidden">
-                <div class="shadow-wrap">
-                  <div class="shadow-content">
-                    <h4 class="project-item-title">Lorem</h4>
-                    <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
-                  </div>
+              </div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/projects/project-3-min.webp   1x,
+                    ./images/projects/project-3@2-min.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/projects/project-3-min.jpg   1x,
+                    ./images/projects/project-3@2-min.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/projects/project-3-min.jpg"
+                  alt="project-3"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+            <li class="projects-item hidden">
+              <div class="shadow-wrap">
+                <div class="shadow-content">
+                  <h4 class="project-item-title">Lorem</h4>
+                  <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
                 </div>
-                <picture>
-                  <source
-                    srcset="
-                      ./images/projects/project-4-min.webp   1x,
-                      ./images/projects/project-4@2-min.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/projects/project-4-min.jpg   1x,
-                      ./images/projects/project-4@2-min.jpg 2x
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./images/projects/project-4-min.jpg"
-                    alt="project-4"
-                    loading="lazy"
-                  />
-                </picture>
-              </li>
-              <li class="projects-item hidden">
-                <div class="shadow-wrap">
-                  <div class="shadow-content">
-                    <h4 class="project-item-title">Lorem ipsum</h4>
-                    <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
-                  </div>
+              </div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/projects/project-4-min.webp   1x,
+                    ./images/projects/project-4@2-min.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/projects/project-4-min.jpg   1x,
+                    ./images/projects/project-4@2-min.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/projects/project-4-min.jpg"
+                  alt="project-4"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+            <li class="projects-item hidden">
+              <div class="shadow-wrap">
+                <div class="shadow-content">
+                  <h4 class="project-item-title">Lorem ipsum</h4>
+                  <a href="" class="project-item-link">ПОДРОБНЕЕ</a>
                 </div>
-                <picture>
-                  <source
-                    srcset="
-                      ./images/projects/project-5-min.webp   1x,
-                      ./images/projects/project-5@2-min.webp 2x
-                    "
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/projects/project-5-min.jpg   1x,
-                      ./images/projects/project-5@2-min.jpg 2x
-                    "
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="./images/projects/project-5-min.jpg"
-                    alt="project-5"
-                    loading="lazy"
-                  />
-                </picture>
-              </li>
-            </ul>
-          </div>
+              </div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/projects/project-5-min.webp   1x,
+                    ./images/projects/project-5@2-min.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/projects/project-5-min.jpg   1x,
+                    ./images/projects/project-5@2-min.jpg 2x
+                  "
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/projects/project-5-min.jpg"
+                  alt="project-5"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+          </ul>
           <a href="" class="main-button dark projects-button hidden"
             >ВСЕ ПРОЕКТЫ</a
           >
@@ -467,11 +463,16 @@
                 class="input-check visually-hidden"
                 required
               />
-              <label for="check-text" class="check-text-label"
+              <label for="check-text" class="check-text-label hidden"
                 >Отправляя заявку Вы соглашаетесь с политикой
                 конфиденциальности</label
               >
-              <button type="submit" class="main-button dark">ОТПРАВИТЬ</button>
+              <button
+                type="submit"
+                class="main-button dark connection-button hidden"
+              >
+                ОТПРАВИТЬ
+              </button>
             </form>
             <div class="connection-picture-wrap hidden">
               <picture>
@@ -501,7 +502,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-upper-box hidden">
+      <div class="footer-upper-box">
         <div class="container">
           <!-- logo -->
           <a href="" class="logo footer-logo">
@@ -615,7 +616,7 @@
         </div>
       </div>
       <div class="copyright">
-        &copy 2019 Digital Project. Все права защищены.
+        &copy; 2019 Digital Project. Все права защищены.
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

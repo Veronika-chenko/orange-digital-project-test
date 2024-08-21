@@ -13,7 +13,7 @@
 
   &.hidden {
     opacity: 0;
-    transform: translateX(-20%);
+    transform: translateX(-60px);
     transition: all 1s;
   }
 
@@ -37,14 +37,17 @@
   }
 
   &.hidden {
-    opacity: 0;
-    transform: translate(-20%, 20%);
-    transition: all 800ms;
+    .form-field-wrap {
+      opacity: 0;
+      transition: all 800ms;
+      transition-delay: 200ms;
+    }
   }
 
   &.show {
-    opacity: 1;
-    transform: translate(0);
+    .form-field-wrap {
+      opacity: 1;
+    }
   }
 }
 
@@ -122,6 +125,16 @@
 
   cursor: pointer;
 
+  &.hidden {
+    opacity: 0;
+    transition: opacity 800ms;
+    transition-delay: 400ms;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+
   &::before {
     position: relative;
     content: '';
@@ -146,6 +159,18 @@
   }
 }
 
+.connection-button {
+  &.hidden {
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 600ms;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}
+
 .connection-picture-wrap {
   display: none;
   @include tablet {
@@ -162,12 +187,12 @@
 
   &.hidden {
     opacity: 0;
-    transform: translate(20%, 20%);
+    transform: scale(0.9);
     transition: all 800ms;
   }
 
   &.show {
     opacity: 1;
-    transform: translate(0);
+    transform: scale(1);
   }
 }

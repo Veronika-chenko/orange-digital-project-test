@@ -8,7 +8,7 @@
   margin-bottom: 30px;
   &.hidden {
     opacity: 0;
-    transform: translateX(20%);
+    transform: translateX(-60px);
     transition: all 1s;
   }
 
@@ -20,32 +20,18 @@
 
 .projects-gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.projects-gallery-upper-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-
-  overflow: hidden;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
 
   @include tablet {
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-}
 
-.projects-gallery-lower-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-
-  overflow: hidden;
-
-  @include tablet {
-    flex-wrap: nowrap;
+  @include desktop {
+    gap: 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -58,24 +44,72 @@
     }
   }
 
-  @include tablet {
-    width: inherit;
-  }
-
-  picture {
-    width: 100%;
-  }
-
   &.hidden {
     opacity: 0;
-    transform: translateY(-40%);
-    transition: all 1s;
-    transition-delay: 400ms;
+    transform: translateY(60px);
+    transition-delay: 800ms;
+    transition: opacity 800ms, transform 800ms;
   }
 
   &.show {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @include tablet {
+    width: inherit;
+    height: 158px;
+
+    &:nth-child(1) {
+      width: calc(50% - 7.5px);
+      transition-delay: 0ms;
+    }
+    &:nth-child(2) {
+      width: calc(50% - 7.5px);
+      transition-delay: 200ms;
+    }
+
+    &:nth-child(3) {
+      flex: 1 0 calc(25% - 10px);
+      transition-delay: 400ms;
+    }
+
+    &:nth-child(4) {
+      flex: 1 0 calc(42.5% - 10px);
+      transition-delay: 600ms;
+    }
+
+    &:nth-child(5) {
+      width: calc(32.5% - 10px);
+      transition-delay: 800ms;
+    }
+  }
+
+  @include desktop {
+    height: 255px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: calc(50% - 15px);
+    }
+
+    &:nth-child(3) {
+      flex: 1 0 calc(25% - 20px);
+    }
+
+    &:nth-child(4) {
+      flex: 1 0 calc(42.5% - 20px);
+    }
+
+    &:nth-child(5) {
+      width: calc(32.5% - 20px);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -171,13 +205,11 @@
 
   &.hidden {
     opacity: 0;
-    transform: translateX(-20%);
     transition: all 1s;
     transition-delay: 400ms;
   }
 
   &.show {
     opacity: 1;
-    transform: translateX(0);
   }
 }

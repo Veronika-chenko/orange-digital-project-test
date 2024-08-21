@@ -7,7 +7,7 @@
     pagination: {
       el: '.swiper-pagination',
       type: 'custom',
-      renderCustom: function (swiper, current, total) {
+      renderCustom: function (_, current, total) {
         return `<span>${getNumber(current)}</span><span>${getNumber(
           total
         )}</span>`;
